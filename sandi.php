@@ -42,7 +42,7 @@ Cookie: identity=".$rand1."; browser_id=".$rand2."; _ga=GA1.2.1024758930.1531960
                              )
                            );
 	$ch = curl_init();
-	curl_setopt($ch, CURLOPT_URL, "https://hub.tokopedia.com/iris/v1/track/event");
+	curl_setopt($ch, CURLOPT_URL, "https://gql.tokopedia.com/");
 	curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
 	curl_setopt($ch, CURLOPT_FOLLOWLOCATION, true);
 	curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);

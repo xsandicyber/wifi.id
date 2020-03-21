@@ -20,7 +20,7 @@ for($a=0;$a<$jumlah;$a++) {
 	$rand2 = md5(rand(12345678,98765432));
 	$rand = array($rand1,$rand2);
 	$rand3 = md5($rand[rand(1,2)]);
-	$config['headers'] = explode("\n", "Host: api.bukalapak.com
+	$config['headers'] = explode("\n", "Host: m.bukalapak.com
 Connection: keep-alive
 Content-Length: 134
 Origin: https://m.bukalapak.com
@@ -44,7 +44,7 @@ Cookie: identity=".$rand1."; browser_id=".$rand2."; _ga=GA1.2.1024758930.1531960
                              )
                            );
 	$ch = curl_init();
-	curl_setopt($ch, CURLOPT_URL, "https://m.bukalapak.com/trusted_devices/otp_request");
+	curl_setopt($ch, CURLOPT_URL, "https://m.bukalapak.com/trusted_devices/manual_otp_validation?manual_phone=");
 	curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
 	curl_setopt($ch, CURLOPT_FOLLOWLOCATION, true);
 	curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
